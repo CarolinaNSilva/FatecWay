@@ -19,17 +19,91 @@
   <section class="container d-flex flex-column align-items-center justify-content-center">
     <h1 class="display-4"> Bem-vindo a Lanchonete Fatec</h1>
     <p class="lead">Para acessar alguns locais da Intituição precisamos verificar seu vínculo:</p>
-    <form action="">
-    <label for="vinculo_opcao" class="form-label">Escolha Opção:</label>
-    <select class="form-select" id="vinculo_opcao" required>
-      <option selected disabled value="">Aluno</option>
-      <option>...</option>
-    </select>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Código</th>
+          <th scope="col">Vinculo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Diretor</td>
+       
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Coordenador</td>
+     
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Professor</td>
+      
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Adiministrativo</td>
+       
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Aluno</td>
+       
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Vestibulando</td>
+         
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Outro</td>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+        </tr>
+      </tbody>
+    </table>
+  
+    <form id="form_opcao" action="">
+      <label for="vinculo_opcao" class="form-label">Coloque código da Opção desejada:</label>
+      <input required type="text" name="" id="vinculo_opcao">
+      <button onclick="enviar()">Confirmar</button>
     </form>
-    
   </section>
   <script src="./valida_vinculo.js"></script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <form action="">
+    <label for="vinculo_opcao" class="form-label">Escolha Opção:</label>
+    <select class="form-select" id="vinculo_opcao" onchange="run()" >
+      <option selected>Open this select menu</option>
+      <option value="1">Diretor</option>
+      <option value="2">Coordenador</option>
+      <option value="3">Professor</option>
+      <option value="4">Adiministrativo</option>
+      <option value="5">Aluno</option>
+      <option value="6">Vestibulando</option>
+      <option value="7">Sem vinculo</option>
+      
+    </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form> -->

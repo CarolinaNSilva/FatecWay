@@ -1,80 +1,114 @@
 var Portaria = function () {
   this.createPessoa = function (type) {
-      var pessoa;
+    var pessoa;
 
-      if (type === "1") {
-          pessoa = new Diretor();
-      } else if (type === "2") {
-        pessoa = new Coordenador();
-      } else if (type === "3") {
-        pessoa = new Professor();
-      } else if (type === "4") {
-        pessoa = new Adiministrativo();
-      }else if (type === "5") {
-        pessoa = new Aluno();
-      }else if (type === "6") {
-        pessoa = new Vestibulando();
-      }else {
-        pessoa = new Semvinculo();
-      }
+    if (type == "1") {
+      pessoa = new Diretor();
+    } else if (type == "2") {
+      pessoa = new Coordenador();
+    } else if (type == "3") {
+      pessoa = new Professor();
+    } else if (type == "4") {
+      pessoa = new Adiministrativo();
+    } else if (type == "5") {
+      pessoa = new Aluno();
+    } else if (type == "6") {
+      pessoa = new Vestibulando();
+    } else {
+      pessoa = new Semvinculo();
+    }
 
-      pessoa.type = type;
+    pessoa.type = type;
 
-      pessoa.say = function () {
-          console.log(this.type + "v " + this.hourly + "e");
-      }
-
-      return pessoa;
+    return pessoa;
   }
 }
 
 var Diretor = function () {
-  this.cargo = "Diretor";
+  this.vinculo = false;
 };
 
 var Coordenador = function () {
-  this.cargo = "Coordenador";
+  this.vinculo = false;
 };
 
 var Professor = function () {
-  this.cargo = "Professor";
+  this.vinculo = false;
 };
 
 var Adiministrativo = function () {
-  this.cargo = "Adiministrativo";
+  this.vinculo = false;
 };
 
 var Aluno = function () {
-  this.cargo = "Aluno";
+  this.vinculo = true;
 };
 
 var Vestibulando = function () {
-  this.cargo = "Vestibulando";
+  this.vinculo = false;
 };
 
 var Semvinculo = function () {
-  this.cargo = " Sem vinculo";
+  this.vinculo = false;
 };
 
-  console.log("\nSeja Bem-vindo a Portaria FATEC!\nPara liberar acesso informe seu vinculo com a instituição")
-
-  console.log(`
-  Vinculo         código
-----------------------------
-  Diretor:           1
-  Coordenador:       2
-  Professor:         3
-  Adiministrativo:   4
-  Aluno:             5 
-  Vestibulando:      6
-  Outro:             0
-`)
-function run() {
-
-var portaria = new Portaria();
-var cod = "1";
-var pessoa = portaria.createPessoa(cod);
-
-console.log(pessoa.cargo)
+function enviar() {
+  var valorOpcao = document.querySelector('#vinculo_opcao').value;
+  window.alert(valorOpcao);
+  return valorOpcao;
+}
+function run() { //USANDO INPUT
+  var portaria = new Portaria();
+  var cod = enviar();
+  var pessoa = portaria.createPessoa(cod);
+  console.log(pessoa)
+  function redirecionamento() {
+    if (pessoa.vinculo == true) {
+      document.querySelector('#form_opcao').action = "./lanchonete.html";
+    } else {
+      document.querySelector('#form_opcao').action = "./rejeicao.html";
+    }
+  }
+  redirecionamento()
 }
 run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function run() { utilizando SELECT
+//   var portaria = new Portaria();
+//   let select = document.querySelector('#vinculo_opcao');
+//   var valorOpcao = select.options[select.selectedIndex].value;
+//   var cod = valorOpcao;
+//   var pessoa = portaria.createPessoa(cod);
+//   console.log(pessoa.vinculo);
+// }
+// run()
+
+// function redirecionamento() {
+//   document.querySelector('#vinculo_opcao').action = "./rejeicao.html";
+// }
+// redirecionamento()

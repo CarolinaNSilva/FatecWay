@@ -15,35 +15,150 @@
     <h1 class="display-4">Olá! Bem-vindo a Lanchonete Fatec</h1>
     <p class="lead">Faça seu pedido de acordo com as opções abaixo:</p>
 
-    <form action="">
+    <h5>Pão:</h5>
+    <div class="form-check">
+      <input class="form-check-input p-2" type="checkbox" value="Pasmesão e orégano" id="ParmesaoOregano">
+      <label class="form-check-label" for="ParmesaoOregano">
+        Parmesão e Orégano
+      </label><br>
+
+      <input class="form-check-input" type="checkbox" value="9 Grãos" id="noveGraos">
+      <label class="form-check-label" for="noveGraos">
+        9 Grãos
+      </label><br>
+
+      <input class="form-check-input" type="checkbox" value="italiano" id="Italiano">
+      <label class="form-check-label" for="Italiano">
+        Italiano
+      </label><br>
+    </div>
+
+    <hr>
+    <h5>Carne:</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="carne" id="carne">
+      <label class="form-check-label" for="carne">
+        Carne bovina
+      </label><br>
 
 
-      <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        Fazer pedido
-      </button>
-    </form>
+      <input class="form-check-input" type="checkbox" value="Frango" id="frango">
+      <label class="form-check-label" for="frango">
+        Frango
+      </label><br>
+
+
+
+      <input class="form-check-input" type="checkbox" value="Linguica" id="linguica">
+      <label class="form-check-label" for="linguica">
+        Linguiça
+      </label><br>
+
+
+
+      <input class="form-check-input" type="checkbox" value="vegetariano" id="vegetariano">
+      <label class="form-check-label" for="vegetariano">
+        Vegetariano
+      </label><br>
+    </div>
+
+    <hr>
+    <h5>Queijo:</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="cheddar" id="cheddar">
+      <label class="form-check-label" for="cheddar">
+        cheddar
+      </label><br>
+
+
+
+      <input class="form-check-input" type="checkbox" value="suíço" id="suíço">
+      <label class="form-check-label" for="suíço">
+        suíço
+      </label><br>
+
+
+
+      <input class="form-check-input" type="checkbox" value="muçarela" id="muçarela">
+      <label class="form-check-label" for="muçarela">
+        muçarela
+      </label><br>
+    </div>
+
+    <hr>
+    <h5>Vegetais:</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="azeitona" id="azeitona">
+      <label class="form-check-label" for="azeitona">
+        azeitona
+      </label><br>
+
+
+
+      <input class="form-check-input" type="checkbox" value="alface" id="alface">
+      <label class="form-check-label" for="alface">
+        alface
+      </label><br>
+
+
+
+      <input class="form-check-input" type="checkbox" value="tomate" id="tomate">
+      <label class="form-check-label" for="tomate">
+        tomate
+      </label><br>
+    </div>
+    <hr>
+
+    <h5>Molhos:</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="Barbecue" id="Barbecue">
+      <label class="form-check-label" for="Barbecue">
+        Barbecue
+      </label><br>
+
+
+
+      <input class="form-check-input" type="checkbox" value="Chipotle" id="Chipotle">
+      <label class="form-check-label" for="Chipotle">
+        Chipotle
+      </label><br>
+
+
+
+      <input class="form-check-input" type="checkbox" value="Supreme" id="Supreme">
+      <label class="form-check-label" for="Supreme">
+        Supreme
+      </label><br>
+    </div>
+    <br>
+    <button class="btn btn-outline-primary" id="enviaPedido">Enviar pedido</button>
     
- 
-  
+ <br><br>
+ <hr><hr>
+  <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Mostrar pedido
+  </button>
+  <br><br>
   <!-- Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Seu Pedido</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           ...
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar pedido</button>
+          <a  href="./index.html" type="button" class="btn btn-primary">Voltar para inicio</a>
         </div>
       </div>
     </div>
   </div>
 </section>
+<script src="./faz_pedido.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 
