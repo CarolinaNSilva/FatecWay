@@ -1,5 +1,5 @@
-## FatecWay
-# Projeto ainda NÃO concluído:
+# FatecWay
+### Projeto ainda NÃO concluído:
 
 O projeto será desenvolvido como atividade para matéria Técnica de Programação II.
 
@@ -40,6 +40,7 @@ Pode ser integrado com um Front-End (exemplo com o uso de Node.JS, JSP, etc);
 
 ## Linguagem Utilizada:
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 ## Grupo:
 - [Carolina Silva](https://github.com/Carolina-Silva)
